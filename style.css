@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.toolbar {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 270px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 rgba(65,77,85,.33);
+}
+.toolbarButton {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition-duration: 0.15s;
+}
+.toolbarButton:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+.toolbarButton img {
+    width: 25px;
+}

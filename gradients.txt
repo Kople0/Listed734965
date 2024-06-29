@@ -1,0 +1,12 @@
+Edurise gradients
+
+Logo: #ff6d0e #cb1fff
+
+1) Nota(Lists manager): #0e58ff #1ffaff
+2) Sheetlab(Worksheet maker): #0effff #e71fff
+3) Workset(Homework/work manager): #1aff0e #1fb2ff
+4) Timestamp(Timetable): #ff0e0e #fff91f
+5) Eduai(Edurise AI): #ff0ae8 #1fffa5
+
+Private: Nota, Sheetlab, Eduai -- 9,99€/Month
+School: Nota, Sheetlab, Workset, Timestamp, Eduai -- 6,99€/Teacher/Month
