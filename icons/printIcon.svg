@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="ionicon"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="printIcon.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5839844"
+     inkscape:cx="256"
+     inkscape:cy="267.36375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     d="m 412.97819,393.40017 h 29.36702 a 49.09187,49.09187 0 0 0 48.94503,-48.94503 V 148.675 A 49.09187,49.09187 0 0 0 442.34521,99.729967 H 70.362946 A 49.09187,49.09187 0 0 0 21.417911,148.675 v 195.78014 a 49.09187,49.09187 0 0 0 48.945035,48.94503 h 29.367021"
+     fill="none"
+     stroke="currentColor"
+     stroke-linejoin="round"
+     stroke-width="39.1561"
+     id="path1" />
+  <rect
+     x="99.729973"
+     y="236.77606"
+     width="313.24823"
+     height="254.51418"
+     rx="29.758581"
+     ry="29.758581"
+     fill="none"
+     stroke="currentColor"
+     stroke-linejoin="round"
+     stroke-width="39.1561"
+     id="rect1" />
+  <path
+     d="M 412.97819,99.729967 V 70.362946 A 49.09187,49.09187 0 0 0 364.03316,21.417911 H 148.675 A 49.09187,49.09187 0 0 0 99.729967,70.362946 v 29.367021"
+     fill="none"
+     stroke="currentColor"
+     stroke-linejoin="round"
+     stroke-width="39.1561"
+     id="path2" />
+  <circle
+     cx="422.76718"
+     cy="168.25301"
+     r="29.36702"
+     id="circle2"
+     style="stroke-width:1.22362" />
+</svg>
