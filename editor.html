@@ -8,10 +8,17 @@
 </head>
 <body>
     <div class="toolbar" id="toolbar">
-        <div class="toolbarButton"><img src="icons/addIcon.svg" alt=""></div>
-        <div class="toolbarButton"><img src="icons/editIcon.svg" alt=""></div>
-        <div class="toolbarButton"><img src="icons/searchIcon.svg" alt=""></div>
-        <div class="toolbarButton"><img src="icons/settingsIcon.svg" alt=""></div>
+        <div class="toolbarButton" id="backToHomeButton"><img src="icons/backIcon.svg" alt=""></div>
+        <div class="toolbarButton" id="addNewButton"><img src="icons/addIcon.svg" alt=""></div>
+        <div class="toolbarButton" id="searchButton" ><img src="icons/searchIcon.svg" alt=""></div>
+        <div class="toolbarButton" id="printListButton"><img src="icons/printIcon.svg" alt=""></div>
+        <div class="toolbarButton" id="settingsButton"><img src="icons/settingsIcon.svg" alt=""></div>
+        <input type="text" placeholder="Suchen" class="searchField" id="searchField">
+    </div>
+    <div class="toolbarPopup" id="toolbarPopup">
+        <h4>0 von 0</h4>
+        <div class="tpButton"><img src="icons/arrowUpIcon.svg" alt=""></div>
+        <div class="tpButton"><img src="icons/arrowDownIcon.svg" alt=""></div>
     </div>
     
     <script src="script.js"></script>

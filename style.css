@@ -1,3 +1,7 @@
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(fonts/Poppins-Regular.ttf);
+}
 body {
     margin: 0;
     padding: 0;
@@ -6,12 +10,48 @@ body {
     position: absolute;
     left: 1px;
     top: 1px;
-    width: 270px;
+    width: 340px;
     height: 70px;
     display: flex;
     align-items: center;
     border-radius: 20px;
     box-shadow: 0 10px 30px 0 rgba(65,77,85,.33);
+}
+.toolbarPopup {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    opacity: 0%;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 rgba(65,77,85,.33);
+    transition-duration: 0.2s;
+    font-family: PoppinsRegular;
+}
+.toolbarPopup h4 {
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3a3a3a;
+}
+.tpButton {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition-duration: 0.15s;
+}
+.tpButton:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
 }
 .toolbarButton {
     width: 50px;
@@ -27,6 +67,22 @@ body {
     background-color: #eeeeee;
     cursor: pointer;
 }
-.toolbarButton img {
+.toolbarButton img, .toolbarPopup img {
     width: 25px;
+}
+.searchField {
+    width: 397px;
+    height: 49px;
+    margin-top: 0px;
+    border: 0px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    color: #3a3a3a;
+    display: none;
+    padding-left: 20px;
+    font-family: PoppinsRegular;
+    transition-duration: 0.3s;
+}
+.searchField:focus {
+    outline: none;
 }
