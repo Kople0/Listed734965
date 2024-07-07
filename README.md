@@ -1,1 +1,1 @@
-This is a Project made for teachers
+Leicht zu benutzen und effektiv. 
