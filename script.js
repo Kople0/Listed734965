@@ -7,12 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const settingsButton = document.getElementById('settingsButton');
     const searchField = document.getElementById('searchField');
     const toolbarPopup = document.getElementById('toolbarPopup');
+    const tpButton = document.querySelectorAll('.tpButton');
+    const tph4 = document.getElementById('tph4');
 
     let toolbarWidth = 340;
     let toolbarHeight = 120;
     let toolbarPopupWidth = 150;
-    let toolbarPopupHeight = 200;
+    let toolbarPopupHeight = 50;
     let searchActive = false;
+    let addActive = false;
 
     const resView = () => {
         let screenWidth = window.innerWidth;
@@ -22,20 +25,68 @@ document.addEventListener('DOMContentLoaded', function() {
         toolbar.style.top = screenHeight - toolbarHeight + "px";
 
         toolbarPopup.style.left = (screenWidth - toolbarPopupWidth) / 2 + "px";
-        toolbarPopup.style.top = screenHeight - toolbarPopupHeight + "px";
+        toolbarPopup.style.top = screenHeight - toolbarPopupHeight - 200 + "px";
     }
-    const searchFunc = () => {
-        if(searchField.value != '') 
+    const showPopupFunc = (width, height, mode, disable) => {
+        if(mode === 'search')
         {
-            toolbarPopup.style.opacity = '100%';
-        }
-        else 
+            if(disable === false) 
+            {
+                toolbarPopup.style.width = width + 'px';
+                toolbarPopup.style.height = height + 'px';
+                toolbarPopupWidth = width;
+                toolbarPopupHeight = height;
+
+                toolbarPopup.style.opacity = '100%';
+                tph4.style.display = 'flex';
+                tph4.style.opacity = '100%';
+                tpButton.forEach(tpb => {
+                    tpb.style.display = 'flex';
+                    tpb.style.opacity = '100%'
+                });
+            }
+            if(disable === true)
+            {
+                toolbarPopup.style.width = width + 'px';
+                toolbarPopup.style.height = height + 'px';
+                toolbarPopupWidth = width;
+                toolbarPopupHeight = height;
+
+                toolbarPopup.style.opacity = '0%';
+                tph4.style.display = 'none';
+                tph4.style.opacity = '0%';
+                tpButton.forEach(tpb => {
+                    tpb.style.display = 'none';
+                    tpb.style.opacity = '0%'
+                });
+            }
+        };
+        if(mode === 'addNew')
         {
-            toolbarPopup.style.opacity = '0%';
+            if(disable === false)
+            {
+                toolbarPopup.style.width = width + 'px';
+                toolbarPopup.style.height = height + 'px';
+                toolbarPopupWidth = width;
+                toolbarPopupHeight = height;
+
+                toolbarPopup.style.opacity = '100%';
+                addActive = true;
+            }
+            if(disable === true)
+            {
+                toolbarPopup.style.width = width + 'px';
+                toolbarPopup.style.height = height + 'px';
+                toolbarPopupWidth = width;
+                toolbarPopupHeight = height;
+
+                toolbarPopup.style.opacity = '0%';
+                addActive = false;
+            }
         }
     }
     const searchMode = () => {
-        if(searchActive === false) 
+        if(searchActive === false & addActive === false) 
         {
             toolbar.style.transitionDuration = '0.3s';
 
@@ -71,14 +122,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
             searchActive = false;
         }
+        if(addActive === true)
+        {
+            showPopupFunc(150, 50, 'addNew', true);
+        }
     }
 
     printListButton.addEventListener('click', function() {
-        print();
-    })
+        if(searchActive === false & addActive === false)
+        {
+            print();
+        }
+    });
+    searchField.addEventListener('focus', function() {
+        showPopupFunc(150, 50, 'search', false);
+    });
+    searchField.addEventListener('blur', function() {
+        showPopupFunc(150, 50, 'search', true);
+    });
+    addNewButton.addEventListener('click', function() {
+        showPopupFunc(300, 400, 'addNew', false);
+    });
     searchButton.addEventListener('click', searchMode);
     backToHomeButton.addEventListener('click', back);
 
     setInterval(resView, 1);
-    setInterval(searchFunc, 1);
 });
